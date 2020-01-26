@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+)
+
+type hotdog int // declaring hotdog to be underlying type int
+var x hotdog    //declaring var x to be of type hotdog
+var y int
+
+func main() {
+
+	fmt.Println(x)        // will output zero value
+	fmt.Printf("%T\n", x) // will print the type hotdog the slash n is a new line
+	x = 42                //assigning a value to var x
+	fmt.Println(x)        //output main.hotdog new line 42
+	y = int(x)            //assigning converstion of y to x
+	fmt.Println(y)        // printing y
+	fmt.Printf("%T", y)   //printing value of y
+
+}
